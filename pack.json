@@ -1,0 +1,7 @@
+{
+	"name": "Pibby Apocalypse [BASE PORT]",
+	"description": "port by sillyborja, only ports the shaders and other stuff",
+	"restart":true,
+	"runsGlobally": false,
+	"color": [170, 0, 255]
+}

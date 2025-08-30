@@ -14,6 +14,8 @@ function onShaderCreate()
     if shadersEnabled then
         runHaxeCode([[
             for (camLol in [game.camGame, game.camHUD]) camLol._filters.push(new ShaderFilter(game.getLuaObject("_shader_zoom").shader));
+
+            game.callOnLuas("onShaderAdd", ["zoom"]);
         ]])
     end
 end

@@ -9,10 +9,14 @@ function onCreatePost()
 
     if shadersEnabled then
         runHaxeCode([[
+            game.callOnLuas("onShaderPreCreate", []);
             for (camLol in [game.camGame, game.camHUD]) camLol.setFilters([new ShaderFilter(game.getLuaObject("_shader_sing").shader)]);
 
             if (game.camGame._filters != null)
+            {
                 game.callOnLuas("onShaderCreate", []);
+                game.callOnLuas("onShaderAdd", ["sing"]);
+            }
         ]])
     end
 end

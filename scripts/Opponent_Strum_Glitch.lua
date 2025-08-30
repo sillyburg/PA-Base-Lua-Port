@@ -1,7 +1,3 @@
-local intensities = {
-
-}
-
 function onCreatePost()
     for i = 0,3 do
         setSpriteShader('opponentStrums.members['..i..']', 'distort')
